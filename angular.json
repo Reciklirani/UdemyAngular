@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "UdemyAngularApp": {
+    "EmptyApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/udemy-angular-app",
+            "outputPath": "dist/empty-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "UdemyAngularApp:build:production"
+              "browserTarget": "EmptyApp:build:production"
             },
             "development": {
-              "browserTarget": "UdemyAngularApp:build:development"
+              "browserTarget": "EmptyApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "UdemyAngularApp:build"
+            "browserTarget": "EmptyApp:build"
           }
         },
         "test": {
