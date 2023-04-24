@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 import { Recipe } from './recipe.model';
 
 @Component({
@@ -6,16 +7,12 @@ import { Recipe } from './recipe.model';
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.css']
 })
-export class RecipesComponent {
-  recipes: Recipe[] = [
-    new Recipe('A test Recipe', 'This is simply a test recipe', 'https://shelfcooking.com/wp-content/uploads/2020/06/Homemade-Spaghetti-Sauce.jpg')
-  ];
+export class RecipesComponent implements OnInit {
+  selectedRecipe: Recipe;
 
-  constructor() {
-
-  }
+  constructor() { }
 
   ngOnInit() {
-
   }
+
 }
