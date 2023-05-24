@@ -4,10 +4,10 @@ import { RecipesComponent } from "./recipes/recipes.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.component";
 import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-edit.component";
-import { PleaseSelectRecipeComponent } from "./please-select-recipe/please-select-recipe.component";
 import { RecipeStartComponent } from "./recipes/recipe-start/recipe-start.component";
 import { RecipeEditComponent } from "./recipes/recipe-edit/recipe-edit.component";
 import { RecipesResolverService } from "./recipes/recipes-resolver.service";
+import { AuthComponent } from "./auth/auth.component";
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
@@ -20,8 +20,7 @@ const appRoutes: Routes = [
     { path: "shopping-list", component: ShoppingListComponent, children: [
         { path: ":edit", component: ShoppingEditComponent },
     ] },
-    { path: "please-select-recipe", component: PleaseSelectRecipeComponent },
-    { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+    { path: 'auth', component: AuthComponent },
     // { path: "**", redirectTo: "recipe" },
 ];
 
